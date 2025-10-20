@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Unload all modules related to the 'both' sink
+pactl list short modules | grep -E 'sink_name=both|source=alsa_output.pci-0000_00_1f.3.analog-stereo.monitor|sink=both' \
+  | awk '{print $1}' \
+  | xargs -r -n1 pactl unload-module
+
+echo "🧹 Cleaned up virtual sink 'both' and its loopbacks."
