@@ -21,3 +21,9 @@ ollama run llama3.2 "Your prompt. e.g.: Summarize me the meeting by listing the 
 # Next
 
 [build your own model.](https://www.hostinger.com/tutorials/ollama-cli-tutorial#Creating_custom_models)
+
+# to "RAG" it, run `go run . --help`
+
+default is ollama
+
+## you can switch from ollama to openai by code change (comment/uncommnent)
